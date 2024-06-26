@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+// esto es una prueba
+
 public class RequestPedidoDTO {
     private String clienteNombre;
     private String empleadoNombre;
