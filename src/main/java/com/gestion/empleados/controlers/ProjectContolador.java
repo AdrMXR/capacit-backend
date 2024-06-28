@@ -38,6 +38,5 @@ public class ProjectContolador {
 	        ResponseProjectDTO proyecto = projectService.getProjectById(id)
 	                .orElseThrow(() -> new ResourceNotFoundException("No existe el proyecto con ID: " + id));
 	        return ResponseEntity.ok(proyecto);
-	    }
-	
+	    }	
 }

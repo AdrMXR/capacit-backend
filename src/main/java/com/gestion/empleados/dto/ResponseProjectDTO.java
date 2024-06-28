@@ -74,7 +74,5 @@ public class ResponseProjectDTO {
 
 	public void setNombreEmpleado(String nombreEmpleado) {
 		this.nombreEmpleado = nombreEmpleado;
-	}
-
-	
+	}	
 }

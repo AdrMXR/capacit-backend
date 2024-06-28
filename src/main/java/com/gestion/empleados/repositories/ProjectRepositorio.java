@@ -41,4 +41,5 @@ public interface ProjectRepositorio extends JpaRepository<Employee_Projects, Lon
 	                                                          @Param("fechaFin") LocalDate fechaFin,
 	                                                          @Param("estatus") String estatus,
 	                                                          @Param("nombreEmpleado") String nombreEmpleado);
+
 }

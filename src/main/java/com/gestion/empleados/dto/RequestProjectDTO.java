@@ -76,5 +76,4 @@ public class RequestProjectDTO {
 		this.posicionEmpleado = posicionEmpleado;
 	}
 	
-	
 }
