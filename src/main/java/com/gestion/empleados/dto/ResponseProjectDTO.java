@@ -17,6 +17,7 @@ public class ResponseProjectDTO {
 		
 	}
 	
+	
 	public ResponseProjectDTO(Long id, String nombreProyecto, LocalDate fechaInicio, LocalDate fechaFin, String estatus,
 			String nombreEmpleado) {
 		super();

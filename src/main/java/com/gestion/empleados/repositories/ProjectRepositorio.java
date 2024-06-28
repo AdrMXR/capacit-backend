@@ -26,7 +26,6 @@ public interface ProjectRepositorio extends JpaRepository<Employee_Projects, Lon
 	           "FROM Employee_Projects p JOIN p.employee e WHERE p.id = :id_project")
 	    ResponseProjectDTO getProjectById(@Param("id_project") Long id_project);
 	
-	
 	//Query que busca a todos los campos por campo
 	@Query("SELECT new com.gestion.empleados.dto.ResponseProjectDTO(p.id, p.nombreProyecto, p.fechaInicio, p.fechaFin, " +
 	           "p.estatus, e.nombre) " +
