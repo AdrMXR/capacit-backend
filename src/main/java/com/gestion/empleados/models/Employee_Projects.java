@@ -6,46 +6,45 @@ import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table (name = "employee_proyects")
+@Table (name = "employee_projects")
 public class Employee_Projects implements Serializable{
-	private static final long serialVersionUID = 1L;
-	
-	@Id
+private static final long serialVersionUID = 1L;
+    
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_proyects")
-	private Long id;
-	
-	@ManyToOne
-    @JoinColumn(name = "id_employee")
-	private Long employee;
-	
-	@Column(name = "nombre_proyecto",length = 255, nullable = false)
-	private String nombre;
-	
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-    @Column(name = "fecha_inicio", nullable = false)
-	private LocalDate fecha_inicio;
-	
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-    @Column(name = "fecha_fin", nullable = false)
-	private LocalDate fecha_fin;
-	
-	@Column(name = "estatus",length = 50, nullable = false)
-	private String Estatus;
+    @Column(name = "ID_PROJECTS")
+    private Long id;
+    
+    @ManyToOne
+    @JoinColumn(name = "EMPLOYEE_ID")
+    private Empleado employee;
+    
+    @Column(name = "NOMBRE_PROYECTO", length = 255, nullable = false)
+    private String nombreProyecto;
+    
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @Column(name = "FECHA_INICIO", nullable = false)
+    private LocalDate fechaInicio;
+    
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @Column(name = "FECHA_FIN", nullable = false)
+    private LocalDate fechaFin;
+    
+    @Column(name = "ESTATUS", length = 50, nullable = false)
+    private String estatus;
 
-	public Employee_Projects(Long id, Long employee, String nombre, LocalDate fecha_inicio, LocalDate fecha_fin,
-			String estatus) {
+    // Constructor, getters y setters
+    public Employee_Projects() {}
+
+	public Employee_Projects(Long id, Empleado employee, String nombreProyecto, LocalDate fechaInicio,
+			LocalDate fechaFin, String estatus) {
 		super();
 		this.id = id;
 		this.employee = employee;
-		this.nombre = nombre;
-		this.fecha_inicio = fecha_inicio;
-		this.fecha_fin = fecha_fin;
-		Estatus = estatus;
-	}
-	
-	public Employee_Projects() {
-		
+		this.nombreProyecto = nombreProyecto;
+		this.fechaInicio = fechaInicio;
+		this.fechaFin = fechaFin;
+		this.estatus = estatus;
 	}
 
 	public Long getId() {
@@ -56,50 +55,49 @@ public class Employee_Projects implements Serializable{
 		this.id = id;
 	}
 
-	public Long getEmployee() {
+	public Empleado getEmployee() {
 		return employee;
 	}
 
-	public void setEmployee(Long employee) {
+	public void setEmployee(Empleado employee) {
 		this.employee = employee;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getNombreProyecto() {
+		return nombreProyecto;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombreProyecto(String nombreProyecto) {
+		this.nombreProyecto = nombreProyecto;
 	}
 
-	public LocalDate getFecha_inicio() {
-		return fecha_inicio;
+	public LocalDate getFechaInicio() {
+		return fechaInicio;
 	}
 
-	public void setFecha_inicio(LocalDate fecha_inicio) {
-		this.fecha_inicio = fecha_inicio;
+	public void setFechaInicio(LocalDate fechaInicio) {
+		this.fechaInicio = fechaInicio;
 	}
 
-	public LocalDate getFecha_fin() {
-		return fecha_fin;
+	public LocalDate getFechaFin() {
+		return fechaFin;
 	}
 
-	public void setFecha_fin(LocalDate fecha_fin) {
-		this.fecha_fin = fecha_fin;
+	public void setFechaFin(LocalDate fechaFin) {
+		this.fechaFin = fechaFin;
 	}
 
 	public String getEstatus() {
-		return Estatus;
+		return estatus;
 	}
 
 	public void setEstatus(String estatus) {
-		Estatus = estatus;
+		this.estatus = estatus;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 	
-	
-	
+		
 }
