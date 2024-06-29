@@ -15,7 +15,7 @@ public interface ProjectService {
 	public List<EmployeeProjects> findAllProjects();
 	public EmployeeProjects saveProject (EmployeeProjects employeeProject);
 	public void deleteProject (Long id);
-	public List<ResponseProjectDTO> getEmployee_ProjectsByParams(RequestProjectDTO requestProjectDTO);
+	public List<ResponseProjectDTO> getEmployeeProjectsByParams(RequestProjectDTO requestProjectDTO);
 	public Optional<ResponseProjectDTO> getProjectById(Long id);
 	
 	

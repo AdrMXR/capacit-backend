@@ -29,8 +29,8 @@ public class ProjectContolador {
 	    }
 
 	    @PostMapping("/project/filtro")
-	    public List<ResponseProjectDTO> getEmployee_ProjectsByParams(@RequestBody RequestProjectDTO requestProjectDTO) {
-	        return projectService.getEmployee_ProjectsByParams(requestProjectDTO);
+	    public List<ResponseProjectDTO> getEmployeeProjectsByParams(@RequestBody RequestProjectDTO requestProjectDTO) {
+	        return projectService.getEmployeeProjectsByParams(requestProjectDTO);
 	    }
 
 	    @GetMapping("/project/buscarPorID/{id}")

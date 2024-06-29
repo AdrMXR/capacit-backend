@@ -6,9 +6,9 @@ import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table (name = "employee_projects")
-public class EmployeeProjects implements Serializable{
-private static final long serialVersionUID = 1L;
+@Table(name = "employee_projects")
+public class EmployeeProjects implements Serializable {
+    private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,67 +36,66 @@ private static final long serialVersionUID = 1L;
     // Constructor, getters y setters
     public EmployeeProjects() {}
 
-	public EmployeeProjects(Long id, Empleado employee, String nombreProyecto, LocalDate fechaInicio,
-			LocalDate fechaFin, String estatus) {
-		super();
-		this.id = id;
-		this.employee = employee;
-		this.nombreProyecto = nombreProyecto;
-		this.fechaInicio = fechaInicio;
-		this.fechaFin = fechaFin;
-		this.estatus = estatus;
-	}
+    public EmployeeProjects(Long id, Empleado employee, String nombreProyecto, LocalDate fechaInicio,
+                            LocalDate fechaFin, String estatus) {
+        super();
+        this.id = id;
+        this.employee = employee;
+        this.nombreProyecto = nombreProyecto;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.estatus = estatus;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public Empleado getEmployee() {
-		return employee;
-	}
+    public Empleado getEmployee() {
+        return employee;
+    }
 
-	public void setEmployee(Empleado employee) {
-		this.employee = employee;
-	}
+    public void setEmployee(Empleado employee) {
+        this.employee = employee;
+    }
 
-	public String getNombreProyecto() {
-		return nombreProyecto;
-	}
+    public String getNombreProyecto() {
+        return nombreProyecto;
+    }
 
-	public void setNombreProyecto(String nombreProyecto) {
-		this.nombreProyecto = nombreProyecto;
-	}
+    public void setNombreProyecto(String nombreProyecto) {
+        this.nombreProyecto = nombreProyecto;
+    }
 
-	public LocalDate getFechaInicio() {
-		return fechaInicio;
-	}
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
 
-	public void setFechaInicio(LocalDate fechaInicio) {
-		this.fechaInicio = fechaInicio;
-	}
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
 
-	public LocalDate getFechaFin() {
-		return fechaFin;
-	}
+    public LocalDate getFechaFin() {
+        return fechaFin;
+    }
 
-	public void setFechaFin(LocalDate fechaFin) {
-		this.fechaFin = fechaFin;
-	}
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
+    }
 
-	public String getEstatus() {
-		return estatus;
-	}
+    public String getEstatus() {
+        return estatus;
+    }
 
-	public void setEstatus(String estatus) {
-		this.estatus = estatus;
-	}
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 }

@@ -24,8 +24,8 @@ public class ProjectServicelmpl implements ProjectService{
 	}
 
 	@Override
-	public List<ResponseProjectDTO> getEmployee_ProjectsByParams(RequestProjectDTO requestProjectDTO ) {
-		 return projecRepository.getEmployee_ProjectsByParams(requestProjectDTO.getNombreProyecto(),
+	public List<ResponseProjectDTO> getEmployeeProjectsByParams(RequestProjectDTO requestProjectDTO ) {
+		 return projecRepository.getEmployeeProjectsByParams(requestProjectDTO.getNombreProyecto(),
                  requestProjectDTO.getFechaInicio(),
                  requestProjectDTO.getFechaFin(),
                  requestProjectDTO.getEstatus(),
