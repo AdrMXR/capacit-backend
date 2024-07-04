@@ -1,6 +1,8 @@
 package com.gestion.empleados.services;
 
 import com.gestion.empleados.models.ProjectsAssignment;
+import com.gestion.empleados.dto.ResponseProjectsAssignmentDTO;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -35,4 +37,7 @@ public interface ProjectsAssignmentService {
     
     // Obtiene todas las asignaciones de proyectos por nombre de proyecto (usando un JOIN con otra tabla si es necesario)
     public List<ProjectsAssignment> findByProjectName(String projectName);
+    
+    //Obtiene todas las asignaciones de proyectos junto con la información del departamento asociado.
+    List<ResponseProjectsAssignmentDTO> getProjectAssignmentsWithDepartmentsInfo();
 }

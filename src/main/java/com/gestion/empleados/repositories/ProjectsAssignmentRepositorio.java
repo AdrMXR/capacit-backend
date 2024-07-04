@@ -32,4 +32,10 @@ public interface ProjectsAssignmentRepositorio extends JpaRepository<ProjectsAss
            "INNER JOIN pa.employeeProjects ep " +
            "WHERE ep.nombreProyecto LIKE CONCAT('%', :nombreProyecto, '%')")
     List<ProjectsAssignment> findByProjectName(@Param("nombreProyecto") String nombreProyecto);
+
+ // Encuentra todas las asignaciones de proyectos con información del departamento
+    @Query(value = "SELECT pa.ID as id, pa.ID_PROJECTS as employeeProjectsId, pa.ID_DEPARTMENT as idDepartments, d.NAME as departmentName, pa.DESCRIPTION as description, pa.STATUS as status " +
+            "FROM projects_assignment pa " +
+            "JOIN departments d ON pa.ID_DEPARTMENT = d.ID", nativeQuery = true)
+    List<Object[]> findAllWithDepartmentInfo();
 }
