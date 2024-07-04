@@ -1,7 +1,6 @@
 package com.gestion.empleados.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 public class ResponseProjectDTO {
 	private Long id;
